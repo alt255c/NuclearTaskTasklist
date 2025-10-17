@@ -17,7 +17,7 @@ interface OutputHandler {
 class ConsoleActionInputHandler : ActionInputHandler {
     override fun readAction(): String {
         print("Input an action (add, print, end): ")
-        return readLine()?.trim()?.lowercase() ?: ""
+        return readlnOrNull()?.trim()?.lowercase() ?: ""
     }
 }
 class ConsoleTaskInputHandler : TaskInputHandler {
@@ -27,7 +27,7 @@ class ConsoleTaskInputHandler : TaskInputHandler {
 
         while (true) {
             print("> ")
-            val line = readLine()?.trim() ?: ""
+            val line = readlnOrNull()?.trim() ?: ""
             if (line.isEmpty()) {
                 break
             }
