@@ -1,4 +1,4 @@
-package tech.alt255.nd1
+package tech.alt255.nd1.Task2
 
 data class Task(val id: Int,
                 val lines: List<String>)
